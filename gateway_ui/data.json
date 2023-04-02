@@ -1,0 +1,82 @@
+[
+  {
+    "appkey": "user.app",
+    "slimline": "pro",
+    "machineModels": [
+      {
+        "ip": "127.0.0.1",
+        "port": 8081,
+        "serviceModelList": [
+          {
+            "protocolType": "http",
+            "className": "com.aierx.user.app.http.UserController",
+            "methodModels": [
+              {
+                "type": "http",
+                "methodName": "com.aierx.user.app.http.UserController.queryUserById",
+                "paramTypes": ["int"],
+                "url": "/qeury/{id};",
+                "requestType": "get",
+                "params": [],
+                "pathParams": ["id"],
+                "requestBody": false
+              },
+              {
+                "type": "http",
+                "methodName": "com.aierx.user.app.http.UserController.saveUser",
+                "paramTypes": ["com.aierx.user.app.User"],
+                "url": "/save;",
+                "requestType": "post",
+                "params": [],
+                "pathParams": [],
+                "requestBody": true
+              },
+              {
+                "type": "http",
+                "methodName": "com.aierx.user.app.http.UserController.queryUser",
+                "paramTypes": ["int"],
+                "url": "/qeury;",
+                "requestType": "get",
+                "params": ["id"],
+                "pathParams": [],
+                "requestBody": false
+              }
+            ]
+          },
+          {
+            "protocolType": "http",
+            "className": "com.aierx.user.app.http.AdminController",
+            "methodModels": [
+              {
+                "type": "http",
+                "methodName": "com.aierx.user.app.http.AdminController.heartbeat",
+                "paramTypes": [],
+                "url": "/heartbeat;",
+                "requestType": "get",
+                "params": [],
+                "pathParams": [],
+                "requestBody": false
+              }
+            ]
+          },
+          {
+            "protocolType": "http",
+            "className": "com.aierx.user.app.http.BookController",
+            "methodModels": [
+              {
+                "type": "http",
+                "methodName": "com.aierx.user.app.http.BookController.queryAll",
+                "paramTypes": [],
+                "url": "/book;",
+                "requestType": "get",
+                "params": [],
+                "pathParams": [],
+                "requestBody": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
